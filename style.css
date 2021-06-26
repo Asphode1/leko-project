@@ -180,6 +180,13 @@ h2{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.verify__left__uploadbox__image{
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  transform: translateX(-50%);
+}
 strong{
   font-size: 1em;
 }

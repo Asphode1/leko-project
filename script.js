@@ -34,3 +34,15 @@ verify_button.addEventListener('click',()=>{
     checked__wrong.classList.remove('hidden')
   }
 })
+let img = document.querySelector('.verify__left__uploadbox__image')
+let myFile = document.getElementById('myFile')
+let text = document.querySelector('.verify__left__uploadbox__text')
+myFile.onchange = (e)=>{
+  const [file] = myFile.files
+  if(file){
+    img.src = URL.createObjectURL(file)
+    img.classList.remove('hidden')
+    myFile.classList.add('hidden')
+    text.classList.add('hidden')
+  }
+}
