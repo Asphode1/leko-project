@@ -2,11 +2,15 @@ let selected = document.querySelector('.selected')
 let cert = document.getElementById('certification')
 let verify = document.getElementById('verify')
 let cert_found = document.getElementById('cert__found')
+let checked__wrong = document.querySelector('.checked__wrong')
+let checked__right = document.querySelector('.checked__right')
 function transformx(i){
   selected.style.left = selected.style.left === '50%' ? '' :'50%'
   if(i===1){
     verify.classList.add('hidden')
     cert.classList.remove('hidden')
+    checked__right.classList.add('hidden')
+    checked__wrong.classList.add('hidden')
   }
   if(i===2){
     verify.classList.remove('hidden')
@@ -23,8 +27,6 @@ submit.addEventListener('click',()=>{
   }
 })
 let verify_button = document.getElementById('verify__button')
-let checked__wrong = document.querySelector('.checked__wrong')
-let checked__right = document.querySelector('.checked__right')
 let check = 1 // sửa dòng này
 verify_button.addEventListener('click',()=>{
   if(/* Nếu verify thành công thì hiện dấu tick v xanh */check === 1){
