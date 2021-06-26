@@ -214,15 +214,21 @@ strong{
 }
 .verify__check{
   width: 15rem;
-  height: 15rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.verify__text{
+  width: 15rem;
+  word-wrap: break-word;
+  height: 10rem;
+  font-weight: 600;
+}
 .circle{
   position: relative;;
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border: none;
   border-radius: 50%;
 }
@@ -235,7 +241,7 @@ strong{
   animation: icon 1s linear 1;
 }
 .fa{
-  font-size: 4em;
+  font-size: 2em;
   position: absolute;
   top: 50%;
   left: 50%;

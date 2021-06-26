@@ -4,6 +4,8 @@ let verify = document.getElementById('verify')
 let cert_found = document.getElementById('cert__found')
 let checked__wrong = document.querySelector('.checked__wrong')
 let checked__right = document.querySelector('.checked__right')
+let text_right = document.querySelector('.verify__text__right')
+let text_wrong = document.querySelector('.verify__text__wrong')
 function transformx(i){
   selected.style.left = selected.style.left === '50%' ? '' :'50%'
   if(i===1){
@@ -11,6 +13,8 @@ function transformx(i){
     cert.classList.remove('hidden')
     checked__right.classList.add('hidden')
     checked__wrong.classList.add('hidden')
+    text_right.classList.add('hidden')
+    text_wrong.classList.add('hidden')
   }
   if(i===2){
     verify.classList.remove('hidden')
@@ -27,13 +31,15 @@ submit.addEventListener('click',()=>{
   }
 })
 let verify_button = document.getElementById('verify__button')
-let check = 1 // sửa dòng này
+let check = null // sửa dòng này
 verify_button.addEventListener('click',()=>{
-  if(/* Nếu verify thành công thì hiện dấu tick v xanh */check === 1){
+  if(/* Nếu verify thành công thì hiện dấu tick v xanh */check === true){
     checked__right.classList.remove('hidden')
+    text_right.classList.remove('hidden')
   }
-  else if(/* Nếu verify không thành công thì hiện dấu tick x đỏ */check === 2){
+  else if(/* Nếu verify không thành công thì hiện dấu tick x đỏ */check === false){
     checked__wrong.classList.remove('hidden')
+    text_wrong.classList.remove('hidden')
   }
 })
 let img = document.querySelector('.verify__left__uploadbox__image')
