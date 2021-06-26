@@ -44,6 +44,9 @@ myFile.onchange = (e)=>{
   if(file){
     img.src = URL.createObjectURL(file)
     img.classList.remove('hidden')
+    img.onload = function(){
+      URL.revokeObjectURL(img.src)
+    }
     myFile.classList.add('hidden')
     text.classList.add('hidden')
   }
